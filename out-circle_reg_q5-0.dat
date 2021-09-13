@@ -1,0 +1,112 @@
+! Arcs (come matrice bidimensionale, in cui l'elemento 1 è l'origine e l'elemento 2 è la destinaione dell'arco)
+ARCS: 
+[
+(1	1)	1	2
+(2	1)	2	3
+(3	1)	3	4
+(4	1)	4	5
+(5	1)	5	1
+]
+
+!Matrice dei minimi percorsi(in termini di numero di archi).Il generico elemento(i, j) conta il numero di link tra origine e destinazione), sempre considerando la rete non orientata
+P:
+[
+0	1	2	2	1	
+1	0	1	2	2	
+2	1	0	1	2	
+2	2	1	0	1	
+1	2	2	1	0	
+]
+
+!Percorsi o - d.Matrice dei nodi che compongono il percorso.Se un percorso ha 3 nodi e un altro ha 5 nodi, gli ultimi due elementi del primo caso devono essere tutti 0. Il format deve essere quello di seguito(a b c)....., dove a è origine del percorso, b è la destinazione e c identifica il primo elemento della matrice NODEPATH.NODEPATH:[
+(1	1	1)	1	0	0	0	0	
+(1	2	1)	1	2	0	0	0	
+(1	3	1)	1	2	3	0	0	
+(1	4	1)	1	5	4	0	0	
+(1	5	1)	1	5	0	0	0	
+(2	1	1)	2	1	0	0	0	
+(2	2	1)	1	0	0	0	0	
+(2	3	1)	2	3	0	0	0	
+(2	4	1)	2	3	4	0	0	
+(2	5	1)	2	1	5	0	0	
+(3	1	1)	3	2	1	0	0	
+(3	2	1)	3	2	0	0	0	
+(3	3	1)	1	0	0	0	0	
+(3	4	1)	3	4	0	0	0	
+(3	5	1)	3	4	5	0	0	
+(4	1	1)	4	5	1	0	0	
+(4	2	1)	4	3	2	0	0	
+(4	3	1)	4	3	0	0	0	
+(4	4	1)	1	0	0	0	0	
+(4	5	1)	4	5	0	0	0	
+(5	1	1)	5	1	0	0	0	
+(5	2	1)	5	1	2	0	0	
+(5	3	1)	5	4	3	0	0	
+(5	4	1)	5	4	0	0	0	
+(5	5	1)	1	0	0	0	0	
+]
+
+!Percorsi archi.E' la matrice che identifica gli archi che appartengono al percorso. Il generico elemento è l'dentificativo dell'arco, mentro lo zero indica la fine. Gli zeri servono a riempire i percorsi più corti.
+ARCPATH
+[
+(1	1	1)	0	0	0	0	0	
+(1	2	1)	1	0	0	0	0	
+(1	3	1)	1	2	0	0	0	
+(1	4	1)	5	4	0	0	0	
+(1	5	1)	5	0	0	0	0	
+(2	1	1)	1	0	0	0	0	
+(2	2	1)	0	0	0	0	0	
+(2	3	1)	2	0	0	0	0	
+(2	4	1)	2	3	0	0	0	
+(2	5	1)	1	5	0	0	0	
+(3	1	1)	2	1	0	0	0	
+(3	2	1)	2	0	0	0	0	
+(3	3	1)	0	0	0	0	0	
+(3	4	1)	3	0	0	0	0	
+(3	5	1)	3	4	0	0	0	
+(4	1	1)	4	5	0	0	0	
+(4	2	1)	3	2	0	0	0	
+(4	3	1)	3	0	0	0	0	
+(4	4	1)	0	0	0	0	0	
+(4	5	1)	4	0	0	0	0	
+(5	1	1)	5	0	0	0	0	
+(5	2	1)	5	1	0	0	0	
+(5	3	1)	4	3	0	0	0	
+(5	4	1)	4	0	0	0	0	
+(5	5	1)	0	0	0	0	0	
+]
+
+! nome_operazione qbitin qbitoyt revcost h
+OPERATIONS: [
+(23)	[0	1	11	1]
+(26)	[1	0	12	2]
+(28)	[0	1	11	3]
+(33)	[2	3	11	1]
+(36)	[3	2	12	2]
+(38)	[2	3	11	3]
+(43)	[1	2	11	4]
+(46)	[2	1	12	5]
+(48)	[1	2	11	6]
+(53)	[0	4	11	4]
+(56)	[4	0	12	5]
+(58)	[0	4	11	6]
+(63)	[3	0	11	7]
+(66)	[0	3	12	8]
+(68)	[3	0	11	9]
+(73)	[1	2	11	7]
+(76)	[2	1	12	8]
+(78)	[1	2	11	9]
+(83)	[2	4	11	10]
+(86)	[4	2	12	11]
+(88)	[2	4	11	12]
+(93)	[0	1	11	10]
+(96)	[1	0	12	11]
+(98)	[0	1	11	12]
+(103)	[1	2	11	13]
+(106)	[2	1	12	14]
+(108)	[1	2	11	15]
+(113)	[3	0	11	13]
+(116)	[0	3	12	14]
+(118)	[3	0	11	15]
+]
+
